@@ -13,7 +13,7 @@ with open('urls.json') as json_file:
 dataLen = len(data[0][0])
 i = 0
 
-while i < dataLen
+while i < dataLen:
     print i + ": " + data[0][i]
     i += 1
 
