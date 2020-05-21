@@ -7,7 +7,7 @@ from tbselenium.tbdriver import TorBrowserDriver
 with TorBrowserDriver("/home/liam/DataMule/tor-browser/") as driver:
     driver.get('https://check.torproject.org')
 
-with open('urls.json') as json_file:
+with open('/home/liam/DataMule/urls.json') as json_file:
     data = json.load(json_file)
 
 dataLen = len(data[0][0])
