@@ -10,11 +10,11 @@ with TorBrowserDriver("/home/liam/DataMule/tor-browser/") as driver:
 with open('/home/liam/DataMule/urls.json') as json_file:
     data = json.load(json_file)
 
-dataLen = len(data[0][0])
+dataLen = len(data[0])
 i = 0
 
 while i < dataLen:
-    print i + ": " + data[0][i]
+    print i + ": " + data[i]
     i += 1
 
 #class versus:   
