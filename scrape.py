@@ -17,5 +17,4 @@ while i < dataLen:
     print i + ": " + data[0][i]
     i += 1
 
-class versus:
-    
+#class versus:   
