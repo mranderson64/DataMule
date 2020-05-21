@@ -14,7 +14,7 @@ dataLen = len(data[0])
 i = 0
 
 while i < dataLen:
-    print i + ": " + data[i]
+    print str(i) + ": " + data[i]
     i += 1
 
 #class versus:   
