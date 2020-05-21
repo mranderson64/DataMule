@@ -14,7 +14,7 @@ dataLen = len(data[0])
 i = 0
 
 while i < dataLen:
-    print str(i) + ": " + str(data[i][0])
+    print str(i) + ": " + str(data[i]['name'])
     if i == dataLen:
         break
     i += 1
