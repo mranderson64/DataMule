@@ -17,8 +17,12 @@ class versus:
         self.memw = memw
         
     def scrape():
+    
         with TorBrowserDriver("/home/liam/DataMule/tor-browser/") as driver:
-            driver.get(url)
+            driver.get(self.url)
+            driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[1]').sendKeys(self.user)
+            driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[2]').sendKeys(self.passw)
+            driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
         
 
 nameList = []
@@ -51,7 +55,7 @@ while a < sites:
         memw = data[pos]['memword']
         print(url, user, passw, memw)
         versusScrape = versus(url, user, passw, memw)
-        versusScrape.scrape
+        versusScrape.scrape()
     if i == sites-1:
         break
     i += 1
