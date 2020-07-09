@@ -44,12 +44,13 @@ while i < sites:
     
     
 while a < sites:
-    if nameList[a] == versus:
+    if nameList[a] == "versus":
         pos = posList[a]
-        url = data[pos]['url']
+        url = data[pos]['URL']
         user = data[pos]['user']
-        passw = data[pos]['passw']
-        memw = data[pos]['memw']
+        passw = data[pos]['password']
+        memw = data[pos]['memword']
+        print(url, user, passw, memw)
         versusScrape = versus(url, user, passw, memw)
         versusScrape.scrape()
     if i == sites-1:
