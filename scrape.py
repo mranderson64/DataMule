@@ -33,8 +33,8 @@ while i < dataLen:
     i += 5
     
 while a < nameListLen:
-    print nameList[a]
-    print posList[a]
+    print(nameList[a])
+    print(posList[a])
     if a == nameListLen:
         break
     i += 1
