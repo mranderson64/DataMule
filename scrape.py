@@ -13,8 +13,6 @@ with open('/home/liam/DataMule/urls.json') as json_file:
 nameList = []
 posList = []
 
-nameListLen = len(nameList)
-
 sites = 2
 i = 0
 a = 0
@@ -31,6 +29,8 @@ while i < sites:
     if i == sites-1:
         break
     i += 1
+    
+nameListLen = len(nameList)    
     
 while a < nameListLen:
     print(nameList[a])
