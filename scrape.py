@@ -15,7 +15,7 @@ posList = []
 
 nameListLen = len(nameList)
 
-dataLen = len(data[0])
+sites = 2
 i = 0
 a = 0
 
@@ -28,9 +28,9 @@ while i < dataLen:
     nameList.append(line)
     posList.append(i)    
     
-    if i == dataLen:
+    if i == sites-1:
         break
-    i += 6
+    i += 1
     
 while a < nameListLen:
     print(nameList[a])
