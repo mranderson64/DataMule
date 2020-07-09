@@ -4,8 +4,6 @@ from tbselenium.tbdriver import TorBrowserDriver
 import tbselenium.common as cm
 from tbselenium.utils import launch_tbb_tor_with_stem
 from tbselenium.tbdriver import TorBrowserDriver
-with TorBrowserDriver("/home/liam/DataMule/tor-browser/") as driver:
-    driver.get('https://check.torproject.org')
 
 with open('/home/liam/DataMule/urls.json') as json_file:
     data = json.load(json_file)
@@ -19,7 +17,8 @@ class versus:
         self.memw = memw
         
     def scrape():
-        driver.get(url)
+        with TorBrowserDriver("/home/liam/DataMule/tor-browser/") as driver:
+            driver.get(url)
         
 
 nameList = []
@@ -52,7 +51,7 @@ while a < sites:
         memw = data[pos]['memword']
         print(url, user, passw, memw)
         versusScrape = versus(url, user, passw, memw)
-        versusScrape.scrape()
+        versusScrape.scrape
     if i == sites-1:
         break
     i += 1
