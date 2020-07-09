@@ -9,6 +9,18 @@ with TorBrowserDriver("/home/liam/DataMule/tor-browser/") as driver:
 
 with open('/home/liam/DataMule/urls.json') as json_file:
     data = json.load(json_file)
+    
+    
+class versus:
+    def __init__(self, url, user, passw, memw):
+        self.url = url
+        self.user = user
+        self.passw = passw
+        self.memw = memw
+        
+    def scrape():
+        driver.get(url)
+        
 
 nameList = []
 posList = []
@@ -32,16 +44,15 @@ while i < sites:
     
     
 while a < sites:
-    print(nameList[a])
-    print(posList[a])
+    if nameList[a] == versus:
+        pos = posList[a]
+        url = data[pos]['url']
+        user = data[pos]['user']
+        passw = data[pos]['passw']
+        memw = data[pos]['memw']
+        versusScrape = versus(url, user, passw, memw)
+        versusScrape.scrape()
     if i == sites-1:
         break
     i += 1
     
-class versus:
-    def __init__(self, pos, url, user, passw, memw):
-        self.pos = pos
-        self.url = url
-        self.user = user
-        self.passw = passw
-        self.memw = memw
