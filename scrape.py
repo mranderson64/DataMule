@@ -30,7 +30,7 @@ while i < dataLen:
     
     if i == dataLen:
         break
-    i += 5
+    i += 6
     
 while a < nameListLen:
     print(nameList[a])
