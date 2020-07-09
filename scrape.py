@@ -30,7 +30,9 @@ while i < sites:
         break
     i += 1
     
-nameListLen = len(nameList)    
+nameListLen = len(nameList)   
+
+print(nameListLen) 
     
 while a < nameListLen:
     print(nameList[a])
