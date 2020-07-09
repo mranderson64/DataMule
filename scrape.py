@@ -23,8 +23,8 @@ while i < dataLen:
     try:
         line = data[i]['name']
     except:
-        print "ya goofed liam"
-    print str(i) + ": " + str(line)
+        print("ya goofed liam")
+    print(str(i) + ": " + str(line))
     nameList.append(line)
     posList.append(i)    
     
