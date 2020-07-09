@@ -41,8 +41,8 @@ while a < nameListLen:
     
 class versus:
     def __init__(self, pos, url, user, passw, memw):
-    self.pos = pos
-    self.url = url
-    self.user = user
-    self.passw = passw
-    self.memw = memw
+        self.pos = pos
+        self.url = url
+        self.user = user
+        self.passw = passw
+        self.memw = memw
