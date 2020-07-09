@@ -10,14 +10,39 @@ with TorBrowserDriver("/home/liam/DataMule/tor-browser/") as driver:
 with open('/home/liam/DataMule/urls.json') as json_file:
     data = json.load(json_file)
 
+nameList = []
+posList = []
+
+nameListLen = len(nameList)
+
 dataLen = len(data[0])
 i = 0
+a = 0
 
 while i < dataLen:
-    line = data[i]['name']
+    try:
+        line = data[i]['name']
+    except:
+        print "ya goofed liam"
     print str(i) + ": " + str(line)
+    nameList.append(line)
+    posList.append(i)    
+    
     if i == dataLen:
         break
+    i += 5
+    
+while a < nameListLen:
+    print nameList[a]
+    print posList[a]
+    if a == nameListLen:
+        break
     i += 1
-
-#class versus:   
+    
+class versus:
+    def __init__(self, pos, url, user, passw, memw):
+    self.pos = pos
+    self.url = url
+    self.user = user
+    self.passw = passw
+    self.memw = memw
