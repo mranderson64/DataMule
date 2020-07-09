@@ -30,14 +30,11 @@ while i < sites:
         break
     i += 1
     
-nameListLen = len(nameList)   
-
-print(nameListLen) 
     
-while a < nameListLen:
+while a < sites:
     print(nameList[a])
     print(posList[a])
-    if a == nameListLen:
+    if i == sites-1:
         break
     i += 1
     
