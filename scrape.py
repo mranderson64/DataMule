@@ -19,7 +19,7 @@ sites = 2
 i = 0
 a = 0
 
-while i < dataLen:
+while i < sites:
     try:
         line = data[i]['name']
     except:
