@@ -1,5 +1,7 @@
 import sys
 import json
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from tbselenium.tbdriver import TorBrowserDriver
 import tbselenium.common as cm
 from tbselenium.utils import launch_tbb_tor_with_stem
