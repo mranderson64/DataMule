@@ -16,7 +16,7 @@ class versus:
         self.passw = passw
         self.memw = memw
         
-    def scrape():
+    def scrape(self):
     
         with TorBrowserDriver("/home/liam/DataMule/tor-browser/") as driver:
             driver.get(self.url)
