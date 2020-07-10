@@ -1,5 +1,6 @@
 import sys
 import json
+import mysql.connector
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -12,6 +13,14 @@ from tbselenium.tbdriver import TorBrowserDriver
 with open('/home/liam/DataMule/urls.json') as json_file:
     data = json.load(json_file)
     
+with open('/home/liam/DataMule/config.json') as json_file:
+    config = json.load(json_file)    
+
+mydb = mysql.connector.connect(
+  host=config[0]['host'],
+  user=config[0]['user'],
+  password=config[0]['pass']
+)    
     
 class versus:
     def __init__(self, url, user, passw, memw):
@@ -27,16 +36,16 @@ class versus:
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[1]').send_keys(self.user)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[2]').send_keys(self.passw)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
-            ActionChains(driver).move_to_element(driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[34]/div[1]/span')).perform()
-            driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[34]/div[1]/ul/li[4]/a').click()
+            driver.get(driver.url + '&ipp=100')
             pages = driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[304]/div[2]').get_text(strip=True)
             print(pages)
+            #mycursor.execute(sql, val)
         
 
 nameList = []
 posList = []
 
-sites = 2
+sites = config[0]['sites']
 i = 0
 a = 0
 
