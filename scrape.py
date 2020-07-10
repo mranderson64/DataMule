@@ -26,6 +26,10 @@ class versus:
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[1]').send_keys(self.user)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[2]').send_keys(self.passw)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
+            driver.find_element(By.XPATH, '/html/body/section[2]/ul[2]/li[2]/a').click()
+            driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[34]/div[1]/ul/li[4]/a').click()
+            pages = driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[304]/div[2]').get_text(strip=True)
+            print(pages)
         
 
 nameList = []
