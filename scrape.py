@@ -3,6 +3,7 @@ import json
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
 from tbselenium.tbdriver import TorBrowserDriver
 import tbselenium.common as cm
 from tbselenium.utils import launch_tbb_tor_with_stem
@@ -26,7 +27,7 @@ class versus:
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[1]').send_keys(self.user)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[2]').send_keys(self.passw)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
-            driver.find_element(By.XPATH, '/html/body/section[2]/ul[2]/li[2]/a').click()
+            ActionChains(driver).move_to_element(driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[34]/div[1]/span')).perform()
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[34]/div[1]/ul/li[4]/a').click()
             pages = driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[304]/div[2]').get_text(strip=True)
             print(pages)
