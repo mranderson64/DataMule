@@ -19,8 +19,10 @@ with open('/home/liam/DataMule/config.json') as json_file:
 mydb = mysql.connector.connect(
   host=config[0]['host'],
   user=config[0]['user'],
-  password=config[0]['pass']
-)    
+  password=config[0]['pass'],
+  database=config[0]['name']
+)
+sequel = mydb.cursor()
     
 class versus:
     def __init__(self, url, user, passw, memw):
@@ -39,7 +41,8 @@ class versus:
             driver.get(driver.url + '&ipp=100')
             pages = driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[304]/div[2]').get_text(strip=True)
             print(pages)
-            #mycursor.execute(sql, val)
+            #sequel.execute(sql, val)
+            #mydb.commit()
         
 
 nameList = []

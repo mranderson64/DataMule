@@ -1,8 +1,9 @@
 [
 	{
 		"sites":2,
-		"host":"",
+		"host":"datamule.liamanderson.co.uk",
+		"name":"datamule_db",
 		"user":"datamule",
-		"pass":""
+		"pass":"p7x5F%p5"
 	}
 ]
