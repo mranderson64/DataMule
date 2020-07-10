@@ -1,5 +1,6 @@
 import sys
 import json
+import time
 import mysql.connector
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -40,6 +41,7 @@ class versus:
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
             newURL = driver.current_url + '&ipp=100'
             driver.execute_script("window.location.href = '"+newURL+"';") #WHY DOES THE TOR MODULE NOT HAVE NAVIGATION 
+            sleep(100)
             pages = driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[304]/div[2]').get_text(strip=True)
             print(pages)
             
