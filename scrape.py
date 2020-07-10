@@ -23,8 +23,8 @@ class versus:
     
         with TorBrowserDriver("/home/liam/DataMule/tor-browser/") as driver:
             driver.get(self.url)
-            driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[1]').sendKeys(self.user)
-            driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[2]').sendKeys(self.passw)
+            driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[1]').send_keys(self.user)
+            driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[2]').send_keys(self.passw)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
         
 
