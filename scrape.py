@@ -38,8 +38,8 @@ class versus:
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[1]').send_keys(self.user)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[2]').send_keys(self.passw)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
-            driver.navigate().to(driver.current_url + '&ipp=100')
-            print(driver.current_url + '&ipp=100')
+            newURL = driver.current_url + '&ipp=100'
+            driver.execute_script("window.location.replace("+newURL+");") #WHY DOES THE TOR MODULE NOT HAVE NAVIGATION 
             pages = driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[304]/div[2]').get_text(strip=True)
             print(pages)
             
