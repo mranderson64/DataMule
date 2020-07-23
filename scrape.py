@@ -41,7 +41,8 @@ class versus:
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
             time.sleep(10)
             while(driver.current_url.find('ddos')):
-                if(driver.current_url.find('ddos')):
+                time.sleep(10)
+                if(driver.execute_script("return window.location.href.includes('ddos')")):
                     print('ddos in url')
                     driver.execute_script("window.location.href = 'http://pqqmr3p3tppwqvvapi6fa7jowrehgd36ct6lzr26qqormaqvh6gt4jyd.onion';")
                 else:
