@@ -39,12 +39,13 @@ class versus:
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[1]').send_keys(self.user)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[2]').send_keys(self.passw)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
+            time.sleep(10)
             driver.find_element(By.XPATH, '/html/body/section[2]/ul[2]/li[2]/a').click()
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[1]/strong')
             newURL = driver.current_url + '&ipp=100'
             driver.execute_script("window.location.href = '"+newURL+"';") #WHY DOES THE TOR MODULE NOT HAVE NAVIGATION 
-            time.sleep(100)
-            pages = driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[304]/div[2]').get_text(strip=True)
+            time.sleep(10)
+            pages = driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[304]/div[2]').get_attribute('text')
             print(pages)
             
             totalPages = 99
@@ -56,9 +57,9 @@ class versus:
                 json = driver.execute_script(js)
                 pageData = json.load(json)
                 print(pageData)
-                #sql = "INSERT INTO `Drugs`(`Advert title`, `Category`, `Location`, `Stock`, `Sales`, `Price`, `Units`, `Currency`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8])"
-                #sequel.execute(sql, val)
-                #mydb.commit()
+                sql = "INSERT INTO `Drugs`(`Advert title`, `Category`, `Location`, `Stock`, `Sales`, `Price`, `Units`, `Currency`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8])"
+                sequel.execute(sql, val)
+                mydb.commit()
                 if i == totalPages-1:
                     break
                 i += 1
