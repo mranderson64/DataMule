@@ -40,10 +40,12 @@ class versus:
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[2]').send_keys(self.passw)
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
             time.sleep(10)
-            while('ddos' in driver.current_url):
-                if('ddos' in driver.current_url):
+            while(driver.current_url.find('ddos')):
+                if(driver.current_url.find('ddos')):
+                    print('ddos in url')
                     driver.execute_script("window.location.href = 'http://pqqmr3p3tppwqvvapi6fa7jowrehgd36ct6lzr26qqormaqvh6gt4jyd.onion';")
                 else:
+                    print('ddos not in url')
                     break
             driver.find_element(By.XPATH, '/html/body/section[2]/ul[2]/li[2]/a').click()
             time.sleep(10)
