@@ -41,7 +41,7 @@ class versus:
             driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
             time.sleep(10)
             driver.find_element(By.XPATH, '/html/body/section[2]/ul[2]/li[2]/a').click()
-            driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[1]/strong')
+            time.sleep(10)
             newURL = driver.current_url + '&ipp=100'
             driver.execute_script("window.location.href = '"+newURL+"';") #WHY DOES THE TOR MODULE NOT HAVE NAVIGATION 
             time.sleep(10)
