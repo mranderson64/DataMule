@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+	<useTemplate></useTemplate> <!-- when true the a template file needs to be specified -->
+	<template></template> <!-- Specify template file here -->
+	<usehtml></usehtml> <!-- when true all entries in content will be posted between the head and foot without a template -->
+	<title></title>
+	<description></description>
+	<contentTitle></contentTitle> <!-- used for page H1 symanticly -->
+	<content></content> <!-- for use with useHTML or alternatively within template -->
+</page>
