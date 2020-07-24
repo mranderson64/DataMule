@@ -63,10 +63,10 @@ $middle = '
                     </div>
                 </div>
             </div>
-			'.include('homepage-chart.php').'
+			'.include'homepage-chart.php';
+$bottom = '
 		</section>	
 ';
-$bottom = '';
 
 $templateOutput = $top . $middle . $bottom;
 	

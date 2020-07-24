@@ -1,6 +1,6 @@
 <?php
 $chartData = simplexml_load_file("./data-cache/homepage-chart.xml") or die("Error: Cannot create object");
-$pills = [$chartData->pills->adverts;, $chartData->pills->averagePrice;]
+$pills = [$chartData->pills->adverts, $chartData->pills->averagePrice]
 ?>
 <script>
 window.onload = function () {
