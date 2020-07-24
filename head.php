@@ -6,6 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link href="<?php echo $host ?>/css/style.css" rel="stylesheet"> <!-- Custom Styles -->
 <link href="<?php echo $host ?>/css/bulma.min.css" rel="stylesheet"> <!-- Bulma Styles -->
+<link href="<?php echo $host ?>/css/fontawesome.min.css" rel="stylesheet"> <!-- fontawesome Styles -->
 <title><?php echo $title; ?></title>
 <meta name="description" content="<?php echo $description; ?>">
 <!-- Google Tag Manager -->
@@ -27,7 +28,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="container">
                         <div class="navbar-brand">
                             <a class="navbar-item" href="../">
-                                <img src="http://bulma.io/images/bulma-type-white.png" alt="Logo">
+                                <img src="<?php echo $host ?>/images/logo-long_t_bg.png" alt="Logo">
                             </a>
                             <span class="navbar-burger burger" data-target="navbarMenu">
                                 <span></span>
@@ -40,17 +41,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <div class="tabs is-right">
                                     <ul>
                                         <li class="is-active"><a>Home</a></li>
-                                        <li><a href="">Examples</a></li>
-                                        <li><a href="">Features</a></li>
-                                        <li><a href="">Team</a></li>
-                                        <li><a href="">Help</a></li>
+                                        <li><a href="<?php echo $host ?>/Drugs">Drugs</a></li>
+                                        <li><a href="<?php echo $host ?>/Weapons">Weapons</a></li>
+                                        <li><a href="<?php echo $host ?>/Wearz">Wearz</a></li>
+                                        <li><a href="<?php echo $host ?>/All">All</a></li>
                                     </ul>
                                     <span class="navbar-item">
-                                        <a class="button is-white is-outlined" href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/hero.html">
+                                        <a class="button is-white is-outlined" href="https://liamanderson.co.uk">
                                             <span class="icon">
                                                 <i class="fa fa-github"></i>
                                             </span>
-                                            <span title="Hello from the other side">View Source</span>
+                                            <span>Site Author</span>
                                         </a>
                                     </span>
                                 </div>
