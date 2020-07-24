@@ -4,17 +4,17 @@ $middle = '
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h1 class="title">
-                    <DataMule> is a darkweb/blackmarket data visualisation tool
+                    &#x3C;DataMule&#x3E; is a darkweb/blackmarket data visualisation tool
                     </h1>
                     <h2 class="subtitle">
-                    <DataMule> is a personal project of mine with the aim to flex/practice my skills as a developer while providing a clearnet tool for those interested in the numbers and trends without stepping foot in the darkweb
+                    &#x3C;DataMule&#x3E; is a personal project of mine with the aim to flex/practice my skills as a developer while providing a clearnet tool for those interested in the numbers and trends without stepping foot in the darkweb
                     </h2>
                 </div>
             </div>
         </section>
         <div class="box cta">
             <p class="has-text-centered">
-                <span class="tag is-primary"><a href="https://liamanderson.co.uk">Alpha</a></span> <DataMule> is a work in progress and as such all users should expect frequent changes
+                <span class="tag is-primary"><a href="https://liamanderson.co.uk">Alpha</a></span> &#x3C;DataMule&#x3E; is a work in progress and as such all users should expect frequent changes
             </p>
         </div>
         <section class="container">
