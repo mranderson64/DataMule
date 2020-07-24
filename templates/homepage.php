@@ -71,6 +71,6 @@ $bottom = '
 
 $templateOutput = $top . $middle . $bottom;
 
-include'homepage-chart.php';
+$chartScripts = 'homepage-chart.php';
 	
 ?>

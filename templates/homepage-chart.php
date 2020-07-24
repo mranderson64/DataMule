@@ -3,7 +3,6 @@ $chartData = simplexml_load_file("./data-cache/homepage-chart.xml") or die("Erro
 $pills = [$chartData->pills->adverts, $chartData->pills->averagePrice]
 ?>
 <script>
-window.onload = function () {
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	exportEnabled: true,
@@ -42,5 +41,4 @@ var chart1 = new CanvasJS.Chart("chartContainer1", {
 });
 chart.render();
 chart1.render();
-}
 </script>
