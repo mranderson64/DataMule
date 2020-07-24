@@ -46,9 +46,9 @@
                 </div>
             </div>		
     </footer>
-	<script href="<?php echo $host ?>/scripts/functions.js" rel="text/javascript"></script> <!-- Functions.js -->
-	<script href="<?php echo $host ?>/scripts/jquery.min.js" rel="text/javascript"></script> <!-- jquery.js -->
-	<script href="<?php echo $host ?>/scripts/jquery.canvasjs.min.js" rel="text/javascript"></script> <!-- canvas.jquery.js -->
-	<script href="<?php echo $host ?>/scripts/canvasjs.min.js" rel="text/javascript"></script> <!-- canvasjs -->
+	<script src="<?php echo $host ?>/scripts/functions.js" rel="text/javascript"></script> <!-- Functions.js -->
+	<script src="<?php echo $host ?>/scripts/jquery.min.js" rel="text/javascript"></script> <!-- jquery.js -->
+	<script src="<?php echo $host ?>/scripts/jquery.canvasjs.min.js" rel="text/javascript"></script> <!-- canvas.jquery.js -->
+	<script src="<?php echo $host ?>/scripts/canvasjs.min.js" rel="text/javascript"></script> <!-- canvasjs -->
 </body>
 </html>
