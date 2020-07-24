@@ -4,10 +4,10 @@ $middle = '
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h1 class="title">
-                    &#x3C;DataMule&#x3E; is a darkweb/blackmarket data visualisation tool
+						&#x3C;DataMule&#x3E; is a darkweb/blackmarket data visualisation tool
                     </h1>
                     <h2 class="subtitle">
-                    &#x3C;DataMule&#x3E; is a personal project of mine with the aim to flex/practice my skills as a developer while providing a clearnet tool for those interested in the numbers and trends without stepping foot in the darkweb
+						&#x3C;DataMule&#x3E; is a personal project of mine with the aim to flex/practice my skills as a developer while providing a clearnet tool for those interested in the numbers and trends without stepping foot in the darkweb
                     </h2>
                 </div>
             </div>
@@ -22,13 +22,14 @@ $middle = '
                 <div class="column is-4">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
-                            <i class="fas fa-paw"></i>
+                            <i class="far fa-edit"></i>
                         </div>
                         <div class="card-content">
                             <div class="content">
-                                <h4>Tristique senectus et netus et. </h4>
-                                <p>Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.</p>
-                                <p><a href="#">Learn more</a></p>
+                                <h4>Guest posting?</h4>
+                                <p>Yes, while &lt;DataMule&gt; is the size it reports, blogs and essays will be posted through a manual process.</p>
+								<p>If you wish to post on &lt;DataMule&gt; get in touch with myself via Email</p>
+                                <p><a href="mailto:me@liamanderson.co.uk">Contact us</a></p>
                             </div>
                         </div>
                     </div>
@@ -36,14 +37,13 @@ $middle = '
                 <div class="column is-4">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
-                            <i class="fas fa-empire"></i>
+                            <i class="fas fa-archive"></i>
                         </div>
                         <div class="card-content">
                             <div class="content">
-                                <h4>Tempor orci dapibus ultrices in.</h4>
-                                <p>Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
-                                sed risus.</p>
-                                <p><a href="#">Learn more</a></p>
+                                <h4>Reports &amp; Essays</h4>
+                                <p>&lt;DataMule&gt; will be a repository for reports and essays on the topic of dark market products and sales with accurate and up-to-date data</p>
+                                <p><a href="'.$host.'/insights">Learn more</a></p>
                             </div>
                         </div>
                     </div>
@@ -51,13 +51,14 @@ $middle = '
                 <div class="column is-4">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
-                            <i class="fas fa-apple"></i>
+                            <i class="fas fa-database"></i>
                         </div>
                         <div class="card-content">
                             <div class="content">
-                                <h4> Leo integer malesuada nunc vel risus. </h4>
-                                <p>Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce ut placerat orci nulla pellentesque dignissim enim. Libero id faucibus nisl tincidunt eget nullam. Commodo viverra maecenas accumsan lacus vel facilisis.</p>
-                                <p><a href="#">Learn more</a></p>
+                                <h4>Data</h4>
+                                <p>Can I have access to the data? "Yes, I have/will make particular Data sets available to download"</p>
+								<p>Will my data collection code be made available? "Maybe, when its solid and I think its worth the eyes of the public"</p>
+                                <p><a href="'.$host.'/data">Download</a></p>
                             </div>
                         </div>
                     </div>
@@ -65,8 +66,8 @@ $middle = '
             </div>';
 $bottom = '
 			<div class="columns">
-				<div id="chartContainer" style="height:370px" class="column is-5"></div>
-				<div id="chartContainer1" style="height:370px" class="column is-5"></div>
+				<div id="chartContainer" style="height:370px; margin-bottom:20px;" class="column is-6"></div>
+				<div id="chartContainer1" style="height:370px; margin-bottom:20px;" class="column is-6"></div>
 			</div>
 		</section>	
 ';
