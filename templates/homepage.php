@@ -64,8 +64,10 @@ $middle = '
                 </div>
             </div>';
 $bottom = '
-			<div id="chartContainer" style="height: 370px;display: inline-block;float: left;width: 50%;"></div>
-			<div id="chartContainer1" style="height: 370px;display: inline-block;float: left;width: 50%;"></div>
+			<div class="columns">
+				<div id="chartContainer column is-5"></div>
+				<div id="chartContainer1 column is-5"></div>
+			</div>
 		</section>	
 ';
 
