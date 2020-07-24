@@ -8,6 +8,7 @@
 <link href="<?php echo $host ?>/css/bulma.min.css" rel="stylesheet"> <!-- Bulma Styles -->
 <link href="<?php echo $host ?>/css/fontawesome.min.css" rel="stylesheet"> <!-- fontawesome Styles -->
 <link href="<?php echo $host ?>/css/brands.min.css" rel="stylesheet"> <!-- fontawesome brands Styles -->
+<link rel="icon" type="image/png" href="<?php echo $host ?>/icon/icon_t_bg.png" />
 <title><?php echo $title; ?></title>
 <meta name="description" content="<?php echo $description; ?>">
 <!-- Google Tag Manager -->
