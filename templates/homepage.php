@@ -62,12 +62,15 @@ $middle = '
                         </div>
                     </div>
                 </div>
-            </div>
-			'.include'homepage-chart.php';
+            </div>';
 $bottom = '
+			<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+			<div id="chartContainer1" style="height: 370px; width: 100%;"></div>
 		</section>	
 ';
 
 $templateOutput = $top . $middle . $bottom;
+
+include'homepage-chart.php
 	
 ?>
