@@ -22,7 +22,7 @@ $middle = '
                 <div class="column is-4">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
-                            <i class="fa fa-paw"></i>
+                            <i class="fas fa-paw"></i>
                         </div>
                         <div class="card-content">
                             <div class="content">
@@ -36,7 +36,7 @@ $middle = '
                 <div class="column is-4">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
-                            <i class="fa fa-empire"></i>
+                            <i class="fas fa-empire"></i>
                         </div>
                         <div class="card-content">
                             <div class="content">
@@ -51,7 +51,7 @@ $middle = '
                 <div class="column is-4">
                     <div class="card is-shady">
                         <div class="card-image has-text-centered">
-                            <i class="fa fa-apple"></i>
+                            <i class="fas fa-apple"></i>
                         </div>
                         <div class="card-content">
                             <div class="content">

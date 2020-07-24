@@ -51,7 +51,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <span class="navbar-item">
                                         <a class="button is-white is-outlined" href="https://liamanderson.co.uk">
                                             <span class="icon">
-                                                <i class="fa fa-github"></i>
+                                                <i class="fab fa-github"></i>
                                             </span>
                                             <span>Site Author</span>
                                         </a>
