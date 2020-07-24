@@ -66,8 +66,8 @@ $middle = '
             </div>';
 $bottom = '
 			<div class="columns">
-				<div id="chartContainer" style="height:370px; margin-bottom:20px;" class="column is-6"></div>
-				<div id="chartContainer1" style="height:370px; margin-bottom:20px;" class="column is-6"></div>
+				<div id="chartContainer" style="height:370px; margin-bottom:20px;" class="column is-6 chart-50"></div>
+				<div id="chartContainer1" style="height:370px; margin-bottom:20px;" class="column is-6 chart-50"></div>
 			</div>
 		</section>	
 ';

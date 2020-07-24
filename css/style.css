@@ -1,0 +1,8 @@
+/* === CHART STYLES === */
+.chart-50{
+	overflow:scroll;
+}
+.chart-50::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
