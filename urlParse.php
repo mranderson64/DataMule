@@ -1,6 +1,6 @@
 <?php 
-$protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === 0 ? 'https://' : 'http://';
-$host = $protocol . $_SERVER['HTTP_HOST'];
+$protocol = stripos($_SERVER['SERVER_PROTOCOL'],'https') === 0 ? 'https://' : 'http://'; #this code breaks at some point
+$host = 'https://' . $_SERVER['HTTP_HOST'];
 $urip = $_SERVER['REQUEST_URI'];
 $uri = str_replace("/", "-", $urip); 
 #$urib = str_replace("/liam", "", $urip); // liams stupid dev enviroment
