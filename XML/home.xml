@@ -3,8 +3,8 @@
 	<useTemplate>true</useTemplate>
 	<template>homepage</template>
 	<usehtml>false</usehtml>
-	<title>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</title>
-	<description>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</description>
-	<contentTitle>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</contentTitle>
-	<content>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</content>	
+	<title>&lt;DataMule&gt; is a darkweb/blackmarket data visualisation tool</title>
+	<description>&lt;DataMule&gt; is a personal project of mine with the aim to flex/practice my skills as a developer while providing a clearnet tool for those interested in the numbers and trends without stepping foot in the darkweb</description>
+	<contentTitle>&lt;DataMule&gt;</contentTitle>
+	<content>&lt;DataMule&gt;</content>	
 </page>

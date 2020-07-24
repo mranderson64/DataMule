@@ -63,6 +63,8 @@ $middle = '
                     </div>
                 </div>
             </div>
+			'.include('homepage-chart.php').'
+		</section>	
 ';
 $bottom = '';
 
