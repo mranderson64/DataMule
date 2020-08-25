@@ -10,8 +10,8 @@ from tbselenium.tbdriver import TorBrowserDriver
 import tbselenium.common as cm
 from tbselenium.utils import launch_tbb_tor_with_stem
 from tbselenium.tbdriver import TorBrowserDriver
-from versus import versus
-from tpds import tpds
+import versus
+import tpds
 
 with open('/home/liam/DataMule/urls.json') as json_file:
     data = json.load(json_file)
