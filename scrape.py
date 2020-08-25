@@ -58,7 +58,7 @@ while a < sites:
         print(url, user, passw, memw)
         versusScrape = versus(url, user, passw, memw)
         versusScrape.scrape()
-    else if nameList[a] == "versus":
+    elif nameList[a] == "versus":
         pos = posList[a]
         url = data[pos]['URL']
         user = data[pos]['user']
