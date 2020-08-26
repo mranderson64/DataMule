@@ -67,6 +67,6 @@ while a < sites:
         print(url, user, passw, memw)
         versusScrape = versus.versus(url, user, passw, memw)
         versusScrape.scrape()
-    if i == sites-1:
+    if a == sites:
         break
-    i += 1
+    a += 1
