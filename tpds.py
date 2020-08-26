@@ -1,6 +1,7 @@
 import sys
 import json
 import time
+import datetime
 import mysql.connector
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -41,10 +42,10 @@ class tpds:
                 jsonD = driver.execute_script(js)
                 pageData = json.loads(jsonD)
                 print(pageData)
-                sql = "INSERT INTO `Drugs`(`Advert title`, `Category`, `Location`, `Stock`, `Sales`, `Price`, `Units`, `Currency`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
+                sql = "INSERT INTO `Drugs`(`Advert title`, `Category`, `Location`, `Stock`, `Sales`, `Price`, `Units`, `Currency`, `Date`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
                 a = 0
                 while a < len(pageData):
-                    val = (pageData[a]['title'], pageData[a]['cat'], pageData[a]['loc'], pageData[a]['stock'], pageData[a]['sales'], pageData[a]['price'], pageData[a]['unit'], pageData[a]['currency'])
+                    val = (pageData[a]['title'], pageData[a]['cat'], pageData[a]['loc'], pageData[a]['stock'], pageData[a]['sales'], pageData[a]['price'], pageData[a]['unit'], pageData[a]['currency'], datetime.datetime.now().isoformat())
                     sequel.execute(sql, val)
                     mydb.commit()
                     a += 1
