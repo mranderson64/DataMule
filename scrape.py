@@ -48,7 +48,7 @@ while i < sites:
     i += 1
 
 
-while a <= sites:
+while a < sites:
     if nameList[a] == "tpds":
         pos = posList[a]
         url = data[pos]['URL']
@@ -67,4 +67,6 @@ while a <= sites:
         print(url, user, passw, memw)
         versusScrape = versus.versus(url, user, passw, memw)
         versusScrape.scrape()
+    if i == sites-1:
+        break
     i += 1
