@@ -47,6 +47,7 @@ class tpds:
                     val = (pageData[a]['title'], pageData[a]['cat'], pageData[a]['loc'], pageData[a]['stock'], pageData[a]['sales'], pageData[a]['price'], pageData[a]['unit'], pageData[a]['currency'])
                     sequel.execute(sql, val)
                     mydb.commit()
+                    a += 1
                 if i == 6:
                     break
                 i += 1
