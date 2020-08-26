@@ -1,3 +1,11 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.action_chains import ActionChains
+from tbselenium.tbdriver import TorBrowserDriver
+import tbselenium.common as cm
+from tbselenium.utils import launch_tbb_tor_with_stem
+from tbselenium.tbdriver import TorBrowserDriver
 class tpds:
     def __init__(self, url, user, passw, memw):
         self.url = url
