@@ -10,6 +10,17 @@ from tbselenium.tbdriver import TorBrowserDriver
 import tbselenium.common as cm
 from tbselenium.utils import launch_tbb_tor_with_stem
 from tbselenium.tbdriver import TorBrowserDriver
+with open('/home/liam/DataMule/config.json') as json_file:
+    config = json.load(json_file)
+
+mydb = mysql.connector.connect(
+  host=config[0]['host'],
+  user=config[0]['user'],
+  password=config[0]['pass'],
+  database=config[0]['name']
+)
+sequel = mydb.cursor()
+
 class versus:
     def __init__(self, url, user, passw, memw):
         self.url = url

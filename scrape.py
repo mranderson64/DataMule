@@ -19,14 +19,6 @@ with open('/home/liam/DataMule/urls.json') as json_file:
 with open('/home/liam/DataMule/config.json') as json_file:
     config = json.load(json_file)
 
-mydb = mysql.connector.connect(
-  host=config[0]['host'],
-  user=config[0]['user'],
-  password=config[0]['pass'],
-  database=config[0]['name']
-)
-sequel = mydb.cursor()
-
 nameList = []
 posList = []
 
