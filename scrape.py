@@ -56,7 +56,7 @@ while a < sites:
         passw = data[pos]['password']
         memw = data[pos]['memword']
         print(url, user, passw, memw)
-        versusScrape = versus(url, user, passw, memw)
+        versusScrape = tpds.tpds(url, user, passw, memw)
         versusScrape.scrape()
     elif nameList[a] == "versus":
         pos = posList[a]
@@ -65,7 +65,7 @@ while a < sites:
         passw = data[pos]['password']
         memw = data[pos]['memword']
         print(url, user, passw, memw)
-        versusScrape = versus(url, user, passw, memw)
+        versusScrape = versus.versus(url, user, passw, memw)
         versusScrape.scrape()
     if i == sites-1:
         break

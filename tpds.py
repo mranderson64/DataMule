@@ -9,27 +9,7 @@ class tpds:
 
         with TorBrowserDriver("/home/liam/DataMule/tor-browser/") as driver:
             driver.get(self.url)
-            driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[1]').send_keys(self.user)
-            driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[2]').send_keys(self.passw)
-            driver.find_element(By.XPATH, '/html/body/section[3]/div/div/form/input[5]').click()
-            time.sleep(10)
-            while(driver.current_url.find('ddos')):
-                time.sleep(10)
-                if(driver.execute_script("return window.location.href.includes('ddos')")):
-                    print('ddos in url')
-                    driver.execute_script("window.location.href = 'http://pqqmr3p3tppwqvvapi6fa7jowrehgd36ct6lzr26qqormaqvh6gt4jyd.onion';")
-                else:
-                    print('ddos not in url')
-                    break
-            driver.find_element(By.XPATH, '/html/body/section[2]/ul[2]/li[2]/a').click()
-            time.sleep(10)
-            newURL = driver.current_url + '&ipp=100'
-            driver.execute_script("window.location.href = '"+newURL+"';") #WHY DOES THE TOR MODULE NOT HAVE NAVIGATION
-            time.sleep(10)
-            pages = driver.find_element(By.XPATH, '/html/body/section[3]/div/div[2]/div[304]/div[2]').get_attribute('text')
-            print(pages)
 
-            totalPages = 99
 
             i = 0
 
