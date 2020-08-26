@@ -19,21 +19,21 @@ class tpds:
 
     def scrape(self):
 
+
+
         with TorBrowserDriver("/home/liam/DataMule/tor-browser/") as driver:
-            driver.get(self.url)
+            i = 1
 
-
-            i = 0
-
-            while i < totalPages:
-                js = 'var listingData=\"[\";drugTitle=function(c){return document.getElementsByClassName(\"listings__product\")[c].querySelector(\"table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > a:nth-child(1)\").innerText};drugCat=function(c){return document.getElementsByClassName(\"listings__product\")[c].querySelector(\"table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(2)\").innerText};drugLocation=function(c){return document.getElementsByClassName(\"listings__product\")[c].querySelector(\"table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(4) > td:nth-child(2)\").innerText};drugStock=function(c){return document.getElementsByClassName(\"listings__product\")[c].querySelector(\"table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(5) > td:nth-child(2)\").innerText};drugSales=function(c){return document.getElementsByClassName(\"listings__product\")[c].querySelector(\"table:nth-child(2) > tbody:nth-child(1) > tr:nth-child(6) > td:nth-child(2)\").innerText};drugPrice=function(c){return parseFloat(document.getElementsByClassName(\"listings__price\")[c].querySelector(\"table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > strong:nth-child(1) > span:nth-child(1)\").innerText)};drugCurrency=function(c){a=document.getElementsByClassName(\"listings__price\")[c].querySelector(\"table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > strong:nth-child(1) > span:nth-child(1)\").innerText;b=a.split(\" \");return b[1]};drugUnit=function(c){return document.getElementsByClassName(\"listings__price\")[c].querySelector(\"table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(2) > td:nth-child(1)\").innerText};listing=document.getElementsByClassName(\"listings__product\");for(i=0;i<listing.length;i++){if(i==listing.length-1){last=\"]\"}else{last=\",\"}listingData=listingData+\'{\"title\":\"\'+drugTitle(i)+\'\",\"cat\":\"\'+drugCat(i)+\'\",\"loc\":\"\'+drugLocation(i)+\'\",\"stock\":\"\'+drugStock(i)+\'\",\"sales\":\"\'+drugSales(i)+\'\",\"price\":\"\'+drugPrice(i)+\'\",\"currency\":\"\'+drugCurrency(i)+\'\",\"unit\":\"\'+drugUnit(i)+\'\"}\'+last};return listingData'
+            while i < 7:
+                driver.get(self.url+'?cat='+i+'00')
+                js = 'var listingData=\"[\";drugTitle=function(a){return document.querySelector(\".table1 > tbody:nth-child(2) > tr:nth-child(\"+a+\") > td:nth-child(1)\").innerText};drugCat=function(a){return document.querySelector(\"html body div#main h3\").innerText};drugLocation=\"\";drugStock=function(a){if(document.querySelector(\".table1 > tbody:nth-child(2) > tr:nth-child(\"+a+\") > td:nth-child(3)\").innerText==\"Sold out\"){return\"Sold out\"}else{return\"in stock\"}};drugSales=\"\";drugPrice=function(a){return parseFloat(document.querySelector(\".table1 > tbody:nth-child(2) > tr:nth-child(\"+a+\") > td:nth-child(2)\").innerText.split(\"=\")[0])};drugCurrency=\"USD\";drugUnit=\"\";for(i=1;i<99;i++){test=document.querySelector(\".table1 > tbody:nth-child(2) > tr:nth-child(\"+i+\")\");if(test==null){break}listingData=listingData+\'{\"title\":\"\'+drugTitle(i)+\'\",\"cat\":\"\'+drugCat(i)+\'\",\"loc\":\"\'+drugLocation(i)+\'\",\"stock\":\"\'+drugStock(i)+\'\",\"sales\":\"\'+drugSales(i)+\'\",\"price\":\"\'+drugPrice(i)+\'\",\"currency\":\"\'+drugCurrency+\'\",\"unit\":\"\'+drugUnit+\'\"}\'+last};return listingData'
                 jsonD = driver.execute_script(js)
                 pageData = json.loads(jsonD)
                 print(pageData)
                 sql = "INSERT INTO `Drugs`(`Advert title`, `Category`, `Location`, `Stock`, `Sales`, `Price`, `Units`, `Currency`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8])"
                 sequel.execute(sql, val)
                 mydb.commit()
-                if i == totalPages-1:
+                if i == 6:
                     break
                 i += 1
         mydb.close()
