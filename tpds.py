@@ -41,10 +41,10 @@ class tpds:
                 jsonD = driver.execute_script(js)
                 pageData = json.loads(jsonD)
                 print(pageData)
-                sql = "INSERT INTO `Drugs`(`Advert title`, `Category`, `Location`, `Stock`, `Sales`, `Price`, `Units`, `Currency`) VALUES ([value-1],[value-2],[value-3],[value-4],[value-5],[value-6],[value-7],[value-8])"
+                sql = "INSERT INTO `Drugs`(`Advert title`, `Category`, `Location`, `Stock`, `Sales`, `Price`, `Units`, `Currency`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
                 a = 0
                 while a < len(pageData):
-                    val = (pageData[a]['title'], pageData[a]['cat'], pageData[a]['loc'], pageData[a]['stock'], pageData[a]['sales'], pageData[a]['price'], pageData[a]['currency'], pageData[a]['unit'])
+                    val = (pageData[a]['title'], pageData[a]['cat'], pageData[a]['loc'], pageData[a]['stock'], pageData[a]['sales'], pageData[a]['price'], pageData[a]['unit'], pageData[a]['currency'])
                     sequel.execute(sql, val)
                     mydb.commit()
                 if i == 6:
