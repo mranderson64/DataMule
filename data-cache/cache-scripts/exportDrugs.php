@@ -12,7 +12,7 @@ if (!$mysqli)
     die("ERROR: Could not connect. " . mysqli_connect_error());
 
 // Create and open new csv file
-$csv  = '../' . $exp_table . "_" . date('d-m-Y-his') . '.csv';
+$csv  = '../' . $exp_table . "_" . date('d-m-Y') . '.csv';
 $file = fopen($csv, 'w');
 
 // Get the table
