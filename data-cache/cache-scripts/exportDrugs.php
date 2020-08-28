@@ -2,45 +2,40 @@
 /* vars for export */
 include('../../config.php');
 // database record to be exported
-$db_record = 'Drugs';
-// optional where query
-$where = 'WHERE 1 ORDER BY 1';
-// filename for export
-$csv_filename = 'DRUGS_'.date('Y-m-d').'.csv';
+$exp_table = 'Drugs';
 
-// Database connecten voor alle services
-mysql_connect($hostname, $user, $password)
-or die('Could not connect: ' . mysql_error());
+// Create connection
+$mysqli = new mysqli($hostname, $user, $password, $database);
+$mysqli->set_charset("utf8");
 
-mysql_select_db($database)
-or die ('Could not select database ' . mysql_error());
+if (!$mysqli)
+    die("ERROR: Could not connect. " . mysqli_connect_error());
 
-// create var to be filled with export data
-$csv_export = '';
+// Create and open new csv file
+$csv  = $exp_table . "_" . date('d-m-Y-his') . '.csv';
+$file = fopen($csv, 'w');
 
-// query to get data from database
-$query = mysql_query("SELECT * FROM ".$db_record." ".$where);
-$field = mysql_num_fields($query);
+// Get the table
+if (!$mysqli_result = mysqli_query($mysqli, "SELECT * FROM {$exp_table}"))
+    printf("Error: %s\n", $mysqli->error);
 
-// create line with field names
-for($i = 0; $i < $field; $i++) {
-  $csv_export.= mysql_field_name($query,$i).',';
-}
-// newline (seems to work both on Linux & Windows servers)
-$csv_export.= '
-';
+    // Get column names
+    while ($column = mysqli_fetch_field($mysqli_result)) {
+        $column_names[] = $column->name;
+    }
 
-while($row = mysql_fetch_array($query)) {
-  // create line with field values
-  for($i = 0; $i < $field; $i++) {
-    $csv_export.= '"'.$row[mysql_field_name($query,$i)].'",';
-  }
-  $csv_export.= '
-';
-}
+    // Write column names in csv file
+    if (!fputcsv($file, $column_names))
+        die('Can\'t write column names in csv file');
 
-// Export the data and prompt a csv file for download
-header("Content-type: text/x-csv");
-header("Content-Disposition: attachment; filename=".$csv_filename."");
-echo($csv_export);
+    // Get table rows
+    while ($row = mysqli_fetch_row($mysqli_result)) {
+        // Write table rows in csv files
+        if (!fputcsv($file, $row))
+            die('Can\'t write rows in csv file');
+    }
+
+fclose($file);
+
+echo "<p><a href=\"$csv\">Download</a></p>\n";
 ?>
