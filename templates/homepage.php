@@ -1,4 +1,4 @@
-<?php 
+<?php
 $top = '';
 $middle = '
             <div class="hero-body">
@@ -58,7 +58,7 @@ $middle = '
                                 <h4>Data</h4>
                                 <p>Can I have access to the data? "Yes, I have/will make particular Data sets available to download"</p>
 								<p>Will my data collection code be made available? "Maybe, when its solid and I think its worth the eyes of the public"</p>
-                                <p><a href="'.$host.'/data">Download</a></p>
+                                <p><a href="'.$host.'/data-cache/cache-scripts/exportDrugs.php">Download</a></p>
                             </div>
                         </div>
                     </div>
@@ -69,11 +69,11 @@ $bottom = '
 				<div id="chartContainer" style="height:370px; margin-bottom:20px;" class="column is-6 chart-50"></div>
 				<div id="chartContainer1" style="height:370px; margin-bottom:20px;" class="column is-6 chart-50"></div>
 			</div>
-		</section>	
+		</section>
 ';
 
 $templateOutput = $top . $middle . $bottom;
 
 $chartScripts = 'homepage-chart.php';
-	
+
 ?>
